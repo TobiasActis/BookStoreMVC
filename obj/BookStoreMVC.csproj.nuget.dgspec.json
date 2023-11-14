@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tobia\\OneDrive\\Escritorio\\BookStoreMVC\\BookStoreMVC.csproj": {}
+    "C:\\Users\\tobia\\OneDrive\\Escritorio\\BookStore\\BookStoreMVC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tobia\\OneDrive\\Escritorio\\BookStoreMVC\\BookStoreMVC.csproj": {
+    "C:\\Users\\tobia\\OneDrive\\Escritorio\\BookStore\\BookStoreMVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tobia\\OneDrive\\Escritorio\\BookStoreMVC\\BookStoreMVC.csproj",
+        "projectUniqueName": "C:\\Users\\tobia\\OneDrive\\Escritorio\\BookStore\\BookStoreMVC.csproj",
         "projectName": "BookStoreMVC",
-        "projectPath": "C:\\Users\\tobia\\OneDrive\\Escritorio\\BookStoreMVC\\BookStoreMVC.csproj",
+        "projectPath": "C:\\Users\\tobia\\OneDrive\\Escritorio\\BookStore\\BookStoreMVC.csproj",
         "packagesPath": "C:\\Users\\tobia\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tobia\\OneDrive\\Escritorio\\BookStoreMVC\\obj\\",
+        "outputPath": "C:\\Users\\tobia\\OneDrive\\Escritorio\\BookStore\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "34ycZXIEHvyzPAh7MoeZFcNq40kr7gnCfVx+DI5h9UZzCxjDTRj7RdzT55gX4nf9tHjrMwLjoYFnq34WW+w50A==",
+  "dgSpecHash": "0Qtipd7/eZqTEiunGs+vtzchlwaLg9zfkYhvlDW/EQo69v2GX5pZKxZ54AiXQpn6aC7QPGzeZsDPEZ1jfD47WA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\tobia\\OneDrive\\Escritorio\\BookStoreMVC\\BookStoreMVC.csproj",
+  "projectFilePath": "C:\\Users\\tobia\\OneDrive\\Escritorio\\BookStore\\BookStoreMVC.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tobia\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\tobia\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

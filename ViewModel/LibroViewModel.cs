@@ -18,7 +18,7 @@ namespace BookStoreMVC.ViewModel
         [Display(Name = "Nro de Paginas")]
         public int? NroPaginas { get; set; }
 
-        [Display(Name = "Género")]
+        [Display(Name = "Genero")]
         public int? GeneroRefId { get; set; }
 
         public virtual Genero? Genero { get; set; }
