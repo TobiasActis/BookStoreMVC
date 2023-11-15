@@ -13,9 +13,7 @@
 <table class="table table-stripped table-bordered table-dark">
     <thead>
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.ImagenLibro)
-            </th>
+            
             <th>
                 @Html.DisplayNameFor(model => model.Titulo)
             </th>
@@ -40,9 +38,7 @@
     <tbody>
 @foreach (var item in Model) {
         <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.ImagenLibro)
-            </td>
+           
             <td>
                 @Html.DisplayFor(modelItem => item.Titulo)
             </td>

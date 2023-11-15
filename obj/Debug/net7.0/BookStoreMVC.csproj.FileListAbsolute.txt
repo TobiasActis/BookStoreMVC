@@ -646,3 +646,4 @@ C:\Users\tobia\OneDrive\Escritorio\BookStore\bin\Debug\net7.0\ExcelNumberFormat.
 C:\Users\tobia\OneDrive\Escritorio\BookStore\bin\Debug\net7.0\Irony.dll
 C:\Users\tobia\OneDrive\Escritorio\BookStore\bin\Debug\net7.0\System.IO.Packaging.dll
 C:\Users\tobia\OneDrive\Escritorio\BookStore\bin\Debug\net7.0\XLParser.dll
+C:\Users\tobia\OneDrive\Escritorio\BookStore\bin\Debug\net7.0\ServiceStack.Text.dll
