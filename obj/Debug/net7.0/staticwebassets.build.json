@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "s7kPMorbRVPNlGaDpsjNxxkA/begPfuLQBVoRo4+FoY=",
+  "Hash": "duL/JzCvOi0/KEFrlZV81mhTSVws/Cc/GS9Rq9ndEBo=",
   "Source": "BookStoreMVC",
   "BasePath": "_content/BookStoreMVC",
   "Mode": "Default",
@@ -1103,6 +1103,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\tobia\\OneDrive\\Escritorio\\BookStore\\wwwroot\\Imagenes\\imagen2.jpg",
+      "SourceId": "BookStoreMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\tobia\\OneDrive\\Escritorio\\BookStore\\wwwroot\\",
+      "BasePath": "_content/BookStoreMVC",
+      "RelativePath": "Imagenes/imagen2.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Imagenes\\imagen2.jpg"
     },
     {
       "Identity": "C:\\Users\\tobia\\OneDrive\\Escritorio\\BookStore\\wwwroot\\js\\site.js",

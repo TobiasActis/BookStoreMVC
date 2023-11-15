@@ -6,6 +6,12 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using BookStoreMVC.Models;
+using NPOI.SS.UserModel;
+using System.Data;
+using ClosedXML.Excel;
+using DocumentFormat.OpenXml.InkML;
+using BookStoreMVC.Migrations;
+using ServiceStack.Text;
 
 namespace BookStoreMVC.Controllers
 {
@@ -60,10 +66,29 @@ namespace BookStoreMVC.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Titulo,GeneroRefId,AutorRefId,EditorialRefId,ImagenPelicula,Precio,NroPaginas")] Libro libro)
+        public async Task<IActionResult> Create([Bind("Id,ImagenLibro,Titulo,GeneroRefId,AutorRefId,EditorialRefId,Precio,NroPaginas")] Libro libro)
         {
             if (ModelState.IsValid)
             {
+                var files = HttpContext.Request.Form.Files;
+                if (files != null && files.Count > 0)
+                {
+                   // var imageFile = files[0];
+                    //if (imageFile.Length > 0)
+                    //{
+                      //  var pathDestination = Path.Combine(env.WebRootPath, "images\\libros");
+                   
+                        //var fileDestination = Guid.NewGuid().ToString();
+                        //fileDestination = fileDestination.Replace("-", "");
+                        //fileDestination += Path.GetExtension(imageFile.FileName);
+                        //var DestinationRoute = Path.Combine(pathDestination, fileDestination);
+                        //using (var filestream = new FileStream(DestinationRoute, FileMode.Create))
+                        //{
+                          //  imageFile.CopyTo(filestream);
+                          //  libro.ImagenLibro = fileDestination;
+                        //}
+                    //}
+                }
                 _context.Add(libro);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -98,7 +123,7 @@ namespace BookStoreMVC.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Titulo,GeneroRefId,AutorRefId,EditorialRefId,ImagenPelicula,Precio,NroPaginas")] Libro libro)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,ImagenLibro,Titulo,GeneroRefId,AutorRefId,EditorialRefId,Precio,NroPaginas")] Libro libro)
         {
             if (id != libro.Id)
             {
@@ -166,14 +191,57 @@ namespace BookStoreMVC.Controllers
             {
                 _context.Libros.Remove(libro);
             }
-            
+
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool LibroExists(int id)
         {
-          return (_context.Libros?.Any(e => e.Id == id)).GetValueOrDefault();
+            return (_context.Libros?.Any(e => e.Id == id)).GetValueOrDefault();
+        }
+
+        
+        [HttpGet]
+        public async Task<FileResult> ExportarLibrosAExcel()
+        {
+            var libros = await _context.Libros.ToListAsync();
+            var nombreArchivo = $"Libros.xlsx";
+            return GenerarExcel(nombreArchivo, libros);
+        }
+
+        private FileResult GenerarExcel(string nombreArchivo, IEnumerable<Libro> libros)
+        {
+            DataTable dataTable = new DataTable("Libros");
+            dataTable.Columns.AddRange(new DataColumn[]
+            {
+                new DataColumn("Id"),
+                new DataColumn("Titulo"),
+                new DataColumn("Genero"),
+                new DataColumn("Autor"),
+                new DataColumn("Editorial"),
+                new DataColumn("Numero de paginas"),
+                new DataColumn("Precio")
+            });
+
+            foreach (var libro in libros)
+            {
+                dataTable.Rows.Add(libro.Id,
+                libro.Titulo, libro.GeneroRefId, libro.AutorRefId, libro.EditorialRefId, libro.NroPaginas, libro.Precio);
+            }
+
+            using (XLWorkbook wb = new XLWorkbook())
+            {
+                wb.Worksheets.Add(dataTable);
+
+                using (MemoryStream stream = new MemoryStream())
+                {
+                    wb.SaveAs(stream);
+                    return File(stream.ToArray(),
+                        "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                        nombreArchivo);
+                }
+            }
         }
     }
 }

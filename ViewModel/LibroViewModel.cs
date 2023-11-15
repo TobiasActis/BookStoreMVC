@@ -37,7 +37,7 @@ namespace BookStoreMVC.ViewModel
         public DateTime? FechaRegistro { get; set; }
 
         [Display(Name = "Imagen Libro")]
-        public IFormFile Imagem { get; set; }
+        public IFormFile  Imagen { get; set; }
 
         [Display(Name = "Imagen")]
         public string? ImagenLibro { get; set; }

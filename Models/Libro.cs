@@ -10,6 +10,9 @@ namespace BookStoreMVC.Models
             [Column("ID")]
             public int Id { get; set; }
 
+            [Display(Name = "Imagen")]
+            public string? ImagenLibro { get; set; }
+
             [Display(Name = "Titulo")]
             [StringLength(50)]
             public string? Titulo { get; set; }
@@ -29,16 +32,14 @@ namespace BookStoreMVC.Models
             [ForeignKey("EditorialRefId")]
             public virtual Editorial? Editorial { get; set; }
 
-            [Display(Name = "Imagen")]
-            public string? ImagenPelicula { get; set; }
-
             [Display(Name = "Precio")]
             public int? Precio { get; set; }
 
             [Display(Name = "Nro de Paginas")]
             public int? NroPaginas { get; set; }
+            
+           
 
-
-        }
+    }
     }
 

@@ -45,6 +45,10 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "ClosedXML": {
+              "target": "Package",
+              "version": "[0.102.1, )"
+            },
             "EFCore.BulkExtensions": {
               "target": "Package",
               "version": "[7.1.6, )"
@@ -92,6 +96,10 @@
             "NPOI": {
               "target": "Package",
               "version": "[2.6.2, )"
+            },
+            "ServiceStack.Text": {
+              "target": "Package",
+              "version": "[6.11.0, )"
             }
           },
           "imports": [

@@ -640,3 +640,9 @@ C:\Users\tobia\OneDrive\Escritorio\BookStore\obj\Debug\net7.0\refint\BookStoreMV
 C:\Users\tobia\OneDrive\Escritorio\BookStore\obj\Debug\net7.0\BookStoreMVC.pdb
 C:\Users\tobia\OneDrive\Escritorio\BookStore\obj\Debug\net7.0\BookStoreMVC.genruntimeconfig.cache
 C:\Users\tobia\OneDrive\Escritorio\BookStore\obj\Debug\net7.0\ref\BookStoreMVC.dll
+C:\Users\tobia\OneDrive\Escritorio\BookStore\bin\Debug\net7.0\ClosedXML.dll
+C:\Users\tobia\OneDrive\Escritorio\BookStore\bin\Debug\net7.0\DocumentFormat.OpenXml.dll
+C:\Users\tobia\OneDrive\Escritorio\BookStore\bin\Debug\net7.0\ExcelNumberFormat.dll
+C:\Users\tobia\OneDrive\Escritorio\BookStore\bin\Debug\net7.0\Irony.dll
+C:\Users\tobia\OneDrive\Escritorio\BookStore\bin\Debug\net7.0\System.IO.Packaging.dll
+C:\Users\tobia\OneDrive\Escritorio\BookStore\bin\Debug\net7.0\XLParser.dll

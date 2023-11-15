@@ -106,7 +106,7 @@ namespace BookStoreMVC.Migrations
                     b.Property<int?>("GeneroRefId")
                         .HasColumnType("int");
 
-                    b.Property<string>("ImagenPelicula")
+                    b.Property<string>("ImagenLibro")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int?>("NroPaginas")
